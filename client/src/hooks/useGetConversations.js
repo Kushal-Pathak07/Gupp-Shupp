@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import toast from "react-hot-toast";
-import apiLink from '../../baseUrl';
 
 const useGetConversations = () => {
   
@@ -13,7 +12,7 @@ const useGetConversations = () => {
             setLoading(true);
             try 
             {
-                const res = await fetch(`/${apiLink}/users`);
+                const res = await fetch('/api/users');
                 const data = await res.json();
                 if(data.error)
                 {
